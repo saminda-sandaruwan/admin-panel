@@ -1,0 +1,38 @@
+<div class="row" style="margin-top: 30px;">
+  <div class="col-md-6" style="background-color: lightgrey; padding: 30px; margin: 0 auto;">
+    <h2 class="text-center">Create Event</h2>
+    <form [formGroup]="addForm">
+      <div class="form-group">
+        <label for="Tittle">Title:</label>
+        <input type="text" formControlName="Title" placeholder="Enter title of the event" name="Title" class="form-control" id="Title">
+      </div>
+  
+      <div class="form-group">
+        <label for="Description">Description:</label>
+        <input formControlName="Description" placeholder="Enter brief description here" name="Description" class="form-control" id="Description">
+      </div>
+  
+      <div class="form-group">
+        <label for="Date">Date:</label>
+        <input formControlName="Date" placeholder="enter event date here (Y/M/D)" name="Date" class="form-control" id="Date">
+      </div>
+
+      
+      <div class="form-group">
+        <label for="Date">Start-time:</label>
+        <input formControlName="Start_time" placeholder="Enter start-time here (09.30 am)" name="Start-time" class="form-control" id="Start-time">
+      </div>
+
+      
+      <div class="form-group">
+        <label for="Date">End-time:</label>
+        <input formControlName="End_time" placeholder="Enter end-time date here (10.30 am)" name="End-time" class="form-control" id="End-time">
+      </div>
+  
+      <button style="float: right;" class="btn btn-success" (click)="submit()">create</button>
+    </form>
+  </div>
+</div>
+
+
+

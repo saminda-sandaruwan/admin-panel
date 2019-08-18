@@ -1,0 +1,30 @@
+<div class="col-md-10">
+    <h2> Event Details</h2>
+    <button class="btn btn-success" style="float: right; margin-bottom: 20px;" [routerLink]="['/create-event']"> Add Event</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Event Title</th>
+        <th>Event Description</th>
+        <th>Event Date</th>
+        <th>Event Start-Time</th>
+        <th>Event End-Time</th>
+        <th>Action</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let event of events">
+        <td>{{event.id}}</td>
+        <td>{{event.title}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.date}}</td>
+        <td>{{event.start_time}}</td>
+        <td>{{event.end_time}}</td>
+        <td><button class="btn btn-danger" (click)="delete(event.id)"> Delete</button>
+          <button class="btn btn-warning" [routerLink]="['/edit-event', event.id]" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
